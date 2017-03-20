@@ -1,0 +1,2 @@
+RSpec logo can be found in the official homepage repo on: https://github.com/rspec/rspec.github.io
+This repo has a gemspec file which defines it under the MIT license.

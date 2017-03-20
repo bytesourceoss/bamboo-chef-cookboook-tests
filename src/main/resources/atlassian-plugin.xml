@@ -1,0 +1,46 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="Test tasks for Chef cookbooks" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/bslogo.png</param>
+        <param name="plugin-logo">images/bslogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="cheftesttask language" location="english"/>
+
+    <!-- add our web resources -->
+    <web-resource key="cheftesttask-resources" name="Web Resources for Chef test tasks">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        <resource type="download" name="images/" location="/images"/>
+
+        <context>cheftesttask</context>
+    </web-resource>
+
+    <!-- import from the product container -->
+    <taskType key="kitchenTestTask" name="Chef Kitchen test" class="net.bytesource.bamboo.cheftesttask.KitchenTestTask">
+        <description>Test Chef cookbooks with Kitchen.</description>
+        <resource type="download" name="icon" location="images/kitchen-logo.png"/>
+        <configuration class="net.bytesource.bamboo.cheftesttask.KitchenTestTaskConfigurator"/>
+        <resource type="freemarker" name="edit" location="templates/editKitchenTestTask.ftl"/>
+        <resource type="freemarker" name="view" location="templates/viewKitchenTestTask.ftl"/>
+    </taskType>
+    <taskType key="foodcriticTestTask" name="Chef Foodcritic test" class="net.bytesource.bamboo.cheftesttask.FoodcriticTestTask">
+        <description>Test Chef cookbooks with Foodcritic.</description>
+        <resource type="download" name="icon" location="images/foodcritic-logo.png"/>
+    </taskType>
+    <taskType key="rubocopTestTask" name="Chef Rubocop test" class="net.bytesource.bamboo.cheftesttask.RubocopTestTask">
+        <description>Test Chef cookbooks with Rubocop.</description>
+        <resource type="download" name="icon" location="images/rubocop-logo.png"/>
+    </taskType>
+    <taskType key="rspecTestTask" name="Chef RSpec test" class="net.bytesource.bamboo.cheftesttask.RSpecTestTask">
+        <description>Test Chef cookbooks with RSpec.</description>
+        <resource type="download" name="icon" location="images/rspec-logo.png"/>
+    </taskType>
+    <taskType key="chefTestParser" name="Chef test results" class="net.bytesource.bamboo.cheftesttask.ChefTestParserTask">
+        <description>Parse Chef test results.</description>
+        <category name="test"/>
+        <resource type="download" name="icon" location="images/icon.png"/>
+    </taskType>
+</atlassian-plugin>

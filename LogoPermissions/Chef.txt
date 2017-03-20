@@ -1,0 +1,2 @@
+The Chef logo can be found in https://github.com/chef/chef-docs/tree/master/images
+This repo is under the creative commons license.

@@ -1,0 +1,16 @@
+# Simple Chef cookbook test task plugin
+
+Can run:
+
+* kitchen
+* chefspec
+* rubocop
+* foodcritic
+
+Via:
+
+* Globally installed chefdk
+
+# Test cookbook
+
+TODO

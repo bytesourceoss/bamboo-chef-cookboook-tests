@@ -1,0 +1,12 @@
+<atlassian-plugin-marketing>
+  <compatibility>
+    <product name="bamboo" min="5.0" max="5.9.1"/>
+  </compatibility>
+  <screenshots>
+    <screenshot image="images/ScreenShot1.png"/>
+    <screenshot image="images/ScreenShot2.png"/>
+    <screenshot image="images/ScreenShot3.png"/>
+    <screenshot image="images/ScreenShot4.png"/>
+    <screenshot image="images/ScreenShot5.png"/>
+  </screenshots>
+</atlassian-plugin-marketing>
